@@ -10,9 +10,9 @@ Este proyecto contiene un script en Python (`actionVSI.py`) que permite realizar
 - Paquetes de Python: `ibm_vpc`, `ibm_cloud_sdk_core`
 - Variables de entorno configuradas:
     - `api_key`: Clave API para autenticación en IBM Cloud.
-    - `region`: Región de IBM Cloud donde se encuentran las instancias.
-    - `action`: Acción a realizar en las instancias (por ejemplo, `start`, `stop`).
-    - `instances_id`: Lista de IDs de las instancias, separadas por comas.
+    - `region`: Región de IBM Cloud donde se encuentran las instancias. Consulta las regiones disponibles en [IBM Cloud API Documentation](https://cloud.ibm.com/apidocs/vpc/latest?code=python#endpoint-url).
+    - `action`: Acción a realizar en las instancias (por ejemplo, `start`, `stop` o `reboot`).
+    - `instances_id`: Lista de IDs de las instancias, separadas por comas (por ejemplo, 5678_56e94bb1-78f0-412c-b74e-effdad7b03af,1234_1b1234da-d01b-4688-8171-2476de0b21fd).
 
 ## Instalación
 
@@ -34,6 +34,7 @@ python actionVSI.py
 
 - Asegúrate de que las variables de entorno estén correctamente configuradas antes de ejecutar el script.
 - Este script desactiva la verificación SSL para la autenticación. Úsalo con precaución.
+- Este proyecto se basó en la información proporcionada en [este enlace](https://www.ibm.com/blog/scheduled-manner/).
 
 ## Contribuciones
 
